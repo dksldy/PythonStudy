@@ -10,14 +10,23 @@
 import random
 
 def play_rps_game():
-    
-    u = input("가위, 바위, 보 입력 : ")
-    p = random.choice["가위", "바위", "보"]
-    
-    if u == p:
-        print(f"유저 : {u} 컴퓨터 : {p} 결과 : 비김")
-        if u == "가위" and p[1]:
-            print(f"유저 : {u} 컴퓨터 : {p} 결과 : 유저 패")
-        else:
-            print(f"유저 : {u} 컴퓨터 : {p} 결과 : 유저 승")
-    
+    r = ["가위","바위","보"]
+    w = [("가위","보"),("바위","가위"),("보","바위")]
+    while True:
+        u3 = input("가위, 바위, 보 입력 (end 누르면 종료) : ")
+        if u3 == 'end':
+            print("종료합니다.")
+            break
+        if u3 in r:
+            p3 = random.choice(r)
+            print(f"유저 : {u3}\t 컴퓨터 : {p3}")
+            
+            if u3 == p3:
+                print(f"유저 : {u3} 컴퓨터 : {p3} 결과 : 비김")
+            elif (u3,p3) in w:
+                print(f"유저 : {u3} 컴퓨터 : {p3} 결과 : 유저 승")
+            else:
+                print(f"유저 : {u3} 컴퓨터 : {p3} 결과 : 유저 패")
+      
+
+         

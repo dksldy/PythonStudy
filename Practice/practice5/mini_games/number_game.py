@@ -9,17 +9,18 @@
 '''
 import random
 
-
 def play_number_game():
-    while(True):
-        r = int(random.randint(1, 10))
-        u = int(input("1 ~ 10 사이 숫자를 입력하세요 : "))
+    while True:
+        r2 = int(random.randint(1, 10))
+        u2 = int(input("1 ~ 10 사이 숫자를 입력하세요(0누르면 종료) : "))
+        
+        if  u2 == 0:
+            print("종료됩니다.")
+            break
 
-        if u == r:
-            print(f"{u} 정답!")
-        elif u != r:
-            print(f"틀렸습니다. 정답은 {r} 였습니다.")
+        if u2 == r2:
+            print(f"{u2} 정답!")
+        elif u2 != r2:
+            print(f"틀렸습니다. 정답은 {r2} 였습니다.")
         else:
             ()
-
-play_number_game()

@@ -99,6 +99,7 @@ else:
 
     참일 때 사용할 값 if 조건 else 거짓일 때 사용할 값
 '''
+'''
 x = 10, result = ''
 if x % 2 == 0:
     result = '짝수'
@@ -107,3 +108,4 @@ else:
 
 x = 10
 result = '짝수' if x % 2 == 0 else '홀수'
+'''
